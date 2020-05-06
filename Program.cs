@@ -1,6 +1,6 @@
 using System;
 
-namespace part1
+namespace ADS
 
 {
     class Program
