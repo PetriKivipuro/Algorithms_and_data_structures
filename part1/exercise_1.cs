@@ -17,3 +17,13 @@ namespace part1
         }
     }
 }
+/*
+Pseudocode
+
+sum = 0
+while x is not zero
+    rem
+    x is devided by 10 and remainder is added
+    sum += rem
+return sum
+*/
