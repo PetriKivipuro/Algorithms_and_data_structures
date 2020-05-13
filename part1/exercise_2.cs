@@ -6,14 +6,53 @@ namespace part1
     {
         public int Calculate(string a, string b)
         {
+            int sum = 0;
+            int al = a.Length;
+            int bl = b.Length;
 
-            return 0;
+            for (int i = 0; i <= (al - bl); i++)
+            {
+                if (a[i] == b[0])
+                {
+                    for (int j = 0; j < bl; j++)
+                    {
+                        if (a[i + j] == b[j])
+                        {
+                            if (j == bl - 1)
+                            {
+                                sum++;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            return sum;
+
+        }
+    }
+}
+
+
+
+
+namespace part1
+{
+    using System.Text.RegularExpressions;
+    public class Substrings2
+    {
+        public int Calculate(string a, string b)
+        {
+            // @"(?=SUBSTRING)
+            return Regex.Matches(a, @"(?=" + b + ")").Count;
 
         }
     }
 }
 
 /*
+Tässä oma pohdinta ennen mallivastauksia
+
 
 string a muutetaan listaksi
 samoin string b
