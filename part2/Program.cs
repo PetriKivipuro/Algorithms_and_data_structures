@@ -10,10 +10,9 @@ namespace part2
         {
 
             Effi pl = new Effi();
-            Console.WriteLine(pl.Something());
+            Console.WriteLine(pl.Something("01001"));
 
-            Effi pl2 = new Effi();
-            Console.WriteLine(pl2.SomethingMore());
+
 
 
 
