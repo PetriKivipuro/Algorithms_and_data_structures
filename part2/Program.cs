@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace part2
 
 {
@@ -9,6 +10,21 @@ namespace part2
         static void Main(string[] args)
         {
 
+            // Alla harjoitus 2
+
+            //Punainen viiva LongestRepetition alla ei mene pois
+            LongestRepetition p = new LongestRepetition();
+            Console.WriteLine(p.Calculate(new int[] { 1, 2, 1, 1, 2 })); // 2
+            Console.WriteLine(p.Calculate(new int[] { 1, 2, 3, 4, 5 })); // 1
+            Console.WriteLine(p.Calculate(new int[] { 1, 1, 1, 1, 1 })); // 5
+
+
+
+
+
+
+
+            // Alla harjoitus 1
             /*      Effi pl = new Effi();
                  Console.WriteLine(pl.Something("10"));
                  Console.WriteLine(pl.Something("100"));
@@ -24,7 +40,7 @@ namespace part2
                  Console.WriteLine(pl.CreateInput(10000)); */
 
 
-            Effi counters = new Effi();
+            /* Effi counters = new Effi();
             string input10 = counters.CreateInput(10);
             string input100 = counters.CreateInput(100);
             string input1000 = counters.CreateInput(1000);
@@ -51,7 +67,7 @@ namespace part2
             DateTime end1 = DateTime.Now;
             Console.WriteLine("Time this took: " + end1.Subtract(start1));
 
-
+ */
         }
     }
 }
