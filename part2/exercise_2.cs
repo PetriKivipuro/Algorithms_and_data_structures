@@ -10,25 +10,25 @@ namespace part2
     {
         public int Calculate(int[] t)
         {
-            int n = 0;
-            for (int i = 0; i < n; i++)
-                t[(t[i])] += 0;
-
-
-            int max = t[0], result = 0;
-
-            for (int i = 1; i < n; i++)
+            int n = 1;
+            int h = 1;
+            for (int i = 1; i < t.Length; i++)
             {
-                if (t[i] > max)
+                if (t[i] == t[i - 1])
                 {
-                    max = t[i];
-                    result = i;
+                    n++;
+                }
+                else if (t[i] != t[i - 1])
+                {
+                    n = 1;
+                }
+                if (h < n)
+                {
+                    h = n;
                 }
             }
-
-
-            return result;
-
+            return h;
         }
+
     }
 }
