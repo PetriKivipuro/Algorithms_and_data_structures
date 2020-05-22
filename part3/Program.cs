@@ -8,7 +8,8 @@ namespace part3
     {
         static void Main(string[] args)
         {
-
+            Recu moi = new Recu();
+            moi.Hello(5);
         }
     }
 }
