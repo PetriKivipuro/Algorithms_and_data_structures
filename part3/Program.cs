@@ -23,7 +23,7 @@ namespace part3
             Console.WriteLine(s.Calculate(new int[] { 4, 1, 8, 5 })); // 1
             Console.WriteLine(s.Calculate(new int[] { 1, 10, 100 })); // 9
             Console.WriteLine(s.Calculate(new int[] { 1, 1, 1, 1, 1 })); // 0
-            Console.WriteLine(s.Calculate(Randomizer(10))); // depends on random
+            Console.WriteLine(s.Calculate(SmallestDifference.Randomizer(10))); // depends on random
 
             // Harjoitus 1
             /*   // tää on tehty class systeemillä
