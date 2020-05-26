@@ -14,6 +14,7 @@ namespace part3
             if (a == b)
             {
                 return;
+
             }
 
             sort(a, k);
