@@ -8,14 +8,23 @@ namespace part3
     {
         static void Main(string[] args)
         {
-            // Harjoitus 3
+            // harjoitus 4
+            BinarySearch b = new BinarySearch();
+            Console.WriteLine(b.Find(new int[] { 4, 1, 8, 5 }, 2)); // false
+            Console.WriteLine(b.Find(new int[] { 0, 0 }, 0)); // true
+            Console.WriteLine(b.Find(new int[] { 4, 1, 8, 5, 8, 7, 4, 2, 3 }, 2)); // true
+            Console.WriteLine(b.Find(new int[] { 0 }, 0)); // true
+            Console.WriteLine(b.Find(Randomizer(100000), 3)); // depends on Random
+
+
+            /* // Harjoitus 3
             Sorting s = new Sorting();
             int[] sortMe = Randomizer(100);
             int[] sortMeLarge = Randomizer(1000000);
             s.QuickSort(sortMe);
             s.MergeSort(sortMe);
             s.QuickSort(sortMeLarge);
-            s.MergeSort(sortMeLarge);
+            s.MergeSort(sortMeLarge); */
 
             static int[] Randomizer(int n)
             {

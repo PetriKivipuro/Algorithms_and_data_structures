@@ -10,6 +10,7 @@ namespace part3
         public void MergeSort(int[] a, int[] b)
         {
             int k = (a + b) / 2;
+            DateTime start = DateTime.Now;
             if (a == b)
             {
                 return;
@@ -19,10 +20,13 @@ namespace part3
             sort(k + 1, b);
 
             merge(a, k, k + 1, b);
+            DateTime end = DateTime.Now;
+            Console.WriteLine("Time this took: " + end.Substract(start));
         }
 
         public void QuickSort(int[] a, int[] b)
         {
+            DateTime start2 = DateTime.Now;
             if (a >= b)
             {
                 return;
@@ -31,6 +35,8 @@ namespace part3
 
             sort(a, k - 1);
             sort(k + 1, b);
+            DateTime end2 = DateTime.Now;
+            Console.WriteLine("Time this took: " + end2.Substract(start2));
         }
 
         public void Pivot(int[] a, int[] b)
