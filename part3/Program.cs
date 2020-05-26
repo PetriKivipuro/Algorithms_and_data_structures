@@ -8,13 +8,21 @@ namespace part3
     {
         static void Main(string[] args)
         {
-            // harjoitus 4
-            BinarySearch b = new BinarySearch();
-            Console.WriteLine(b.Find(new int[] { 4, 1, 8, 5 }, 2)); // false
-            Console.WriteLine(b.Find(new int[] { 0, 0 }, 0)); // true
-            Console.WriteLine(b.Find(new int[] { 4, 1, 8, 5, 8, 7, 4, 2, 3 }, 2)); // true
-            Console.WriteLine(b.Find(new int[] { 0 }, 0)); // true
-            Console.WriteLine(b.Find(Randomizer(100000), 3)); // depends on Random
+            // harjoitus 5
+            Inversions inv = new Inversions();
+            int[] t = inv.Create(80, 30);
+            foreach (int i in t)
+            {
+                Console.Write(i + " ");  // 2 1 3 5 4
+            }
+
+            /*   // harjoitus 4
+              BinarySearch b = new BinarySearch();
+              Console.WriteLine(b.Find(new int[] { 4, 1, 8, 5 }, 2)); // false
+              Console.WriteLine(b.Find(new int[] { 0, 0 }, 0)); // true
+              Console.WriteLine(b.Find(new int[] { 4, 1, 8, 5, 8, 7, 4, 2, 3 }, 2)); // true
+              Console.WriteLine(b.Find(new int[] { 0 }, 0)); // true
+              Console.WriteLine(b.Find(Randomizer(100000), 3)); // depends on Random */
 
 
             /* // Harjoitus 3
@@ -26,17 +34,17 @@ namespace part3
             s.QuickSort(sortMeLarge);
             s.MergeSort(sortMeLarge); */
 
-            static int[] Randomizer(int n)
-            {
-                Random random = new Random();
-                int[] arr = new int[n];
-                for (int i = 0; i < arr.Length; i++)
-                {
-                    // integers between 1 and 1000 are enough for us
-                    arr[i] = random.Next(1, 1001);
-                }
-                return arr;
-            }
+            /*   static int[] Randomizer(int n)
+              {
+                  Random random = new Random();
+                  int[] arr = new int[n];
+                  for (int i = 0; i < arr.Length; i++)
+                  {
+                      // integers between 1 and 1000 are enough for us
+                      arr[i] = random.Next(1, 1001);
+                  }
+                  return arr;
+              } */
 
             /*   // harjoitus 2
 
