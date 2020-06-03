@@ -15,48 +15,72 @@ namespace Part4
         }
 
 
-        void AddFirst(int n)
+        public void AddFirst(int n)
         {
-            Node n1 = new Node(n, null, null);
+            Node addMe = new Node(n, null, null);
 
             if (this.head == null)
             {
-                this.head = n1;
-                this.head = Node();
-                this.tail = head;
+                this.head = addMe;
+                this.tail = this.head;
             }
             else
             {
-                this.head.previous = Node();
-                Node.Next() = this.head;
-                this.head = Node();
+                this.head.previous = addMe;
+                addMe.next = this.head;
+                this.head = addMe;
             }
 
         }
 
-        void AddLast(int n)
+        public void AddLast(int n)
         {
-            Node nt = new Node(null, null, n);
+            Node addMe = new Node(n, null, null);
+            if (this.tail == null)
+            {
+                this.tail = addMe;
+                this.head = this.tail;
+            }
+            else
+            {
+                this.tail.next = addMe;
+                addMe.previous = this.tail;
+                this.tail = addMe;
+            }
         }
 
-        void RemoveFirst()
+        public void RemoveFirst()
         {
-
+            this.head = this.head.next;
+            this.head.previous = null;
         }
         void RemoveLast()
         {
-
+            this.tail = this.tail.previous;
+            this.tail.next = null;
         }
 
 
         int GetNode(int x)
         {
-            return 0;
+            Node n = this.head;
+            for (int i = 0; i < x; i++)
+            {
+                n = n.next;
+            }
+            return n.value;
         }
 
-        override ToString()
+        public override string ToString()
         {
-            return;
+            string total = "";
+            Node n = this.head;
+            while (n != null)
+            {
+                total += n.value + " ";
+                n = n.next;
+            }
+            return total;
         }
     }
 
